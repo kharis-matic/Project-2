@@ -1,4 +1,4 @@
-package com.example.ulive;
+package com.example.uliv;
 
 import android.os.Bundle;
 
@@ -8,11 +8,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ulive.R;
+
 public class LoginOptionsActivity extends AppCompatActivity {
 
-    private ActivityLoginOptionsBinding binding;
-
-    private static final String TAG = "LOGIN_OPTIONS_TAG";
+//    private ActivityLoginOptionsBinding binding;
+//
+//    private static final String TAG = "LOGIN_OPTIONS_TAG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +26,8 @@ public class LoginOptionsActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
 
-            binding = ActivityLoginOptionsBinding.inflate(getLayoutInflater(getLayoutInflater()));
-            setContentView(binding.getRoot());
+//            binding = ActivityLoginOptionsBinding.inflate(getLayoutInflater(getLayoutInflater()));
+//            setContentView(binding.getRoot());
         });
     }
 }

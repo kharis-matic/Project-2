@@ -1,4 +1,4 @@
-package com.example.ulive;
+package com.example.uliv;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -13,10 +13,10 @@ import androidx.fragment.app.FragmentTransaction;
 //import androidx.core.view.WindowInsetsCompat;
 
 import com.example.ulive.databinding.ActivityMainBinding;
-import com.example.ulive.fragments.PropertiesListFragment;
-import com.example.ulive.fragments.NotificationListFragment;
-import com.example.ulive.fragments.HomeFragment;
-import com.example.ulive.fragments.ProfileFragment;
+import com.example.uliv.fragments.PropertiesListFragment;
+import com.example.uliv.fragments.NotificationListFragment;
+import com.example.uliv.fragments.HomeFragment;
+import com.example.uliv.fragments.ProfileFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {

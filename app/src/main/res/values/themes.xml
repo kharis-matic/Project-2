@@ -1,14 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.ULiv" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.uliv" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">@color/light_blue</item>
         <item name="colorPrimaryDark">@color/design_default_color_primary_dark</item>
     </style>
 
-    <style name="Theme.ULiv" parent="Base.Theme.ULiv" />
+    <style name="Base.Theme.uliv." parent="Base.Theme.uliv" />
 
-    <style name="Theme.Uliv" parent="android:Theme.Material.Light.NoActionBar">
+    <style name="Base.Theme.uliv.." parent="android:Theme.Material.Light.NoActionBar">
     <item name="colorPrimary">@color/design_default_color_on_primary</item>
     </style>
 

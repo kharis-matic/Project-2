@@ -1,4 +1,4 @@
-package com.example.ulive.fragments;
+package com.example.uliv.fragments;
 
 import android.os.Bundle;
 
@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 
 import com.example.ulive.R;
 
-public class HomeFragment extends Fragment {
+public class PropertiesListFragment extends Fragment {
 
-    public HomeFragment(){
+    public PropertiesListFragment() {
 
     }
 
@@ -20,6 +20,6 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.fragment_properties_list, container, false);
     }
 }
