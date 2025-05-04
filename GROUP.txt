@@ -1,6 +1,0 @@
-Group Name: G Cache
-Tabianan, Ken F.		- Project Manager, Backend Developer
-Endino,Michaela RJ Kate M.	- Database Designer, Backend Developer
-Sanchez, Jan Eduard B.		- Frontend Developer, Backend Developer
-Vasquez, Marl Joie O.		- Frontend Developer, Backend Developer
-Velasco, Shauntie O.		- Frontend Developer, Backend Developer
