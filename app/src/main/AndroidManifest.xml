@@ -15,9 +15,15 @@
         <activity
             android:name="activities.LoginEmailActivity"
             android:exported="false" />
+
         <activity
             android:name="activities.LoginOptionsActivity"
             android:exported="false" />
+
+        <activity
+            android:name="activities.RegisterEmailActivity"
+            android:exported="false" />
+
         <activity
             android:name="activities.MainActivity"
             android:exported="true">
