@@ -5,12 +5,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.uliv.LoginOptionsActivity">
+    tools:context="activities.LoginOptionsActivity">
 
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/LoginBG"
+        android:background="@drawable/loginbg"
         android:foreground="@color/black_transparent">
     </View>
 
@@ -85,7 +85,8 @@
                 android:text="Email"
                 android:minHeight="@dimen/m_button_height"
                 android:layout_marginEnd="5dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                app:icon="@drawable/email_white"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/loginGoogleBtn"

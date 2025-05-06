@@ -1,4 +1,4 @@
-package com.example.uliv;
+package activities;
 
 import android.os.Bundle;
 

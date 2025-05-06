@@ -1,4 +1,4 @@
-package com.example.uliv;
+package activities;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 //import androidx.core.view.ViewCompat;
 //import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ulive.R;
 import com.example.ulive.databinding.ActivityMainBinding;
 import com.example.uliv.fragments.PropertiesListFragment;
 import com.example.uliv.fragments.NotificationListFragment;
