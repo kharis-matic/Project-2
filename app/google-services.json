@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "228451116958",
+    "project_id": "ulive-1b32b",
+    "storage_bucket": "ulive-1b32b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228451116958:android:7a066044006086f6b3588f",
+        "android_client_info": {
+          "package_name": "com.example.ulive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyQcFWHweWUcihvk8Fr3CSblx94HJnH5g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
