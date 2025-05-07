@@ -1,4 +1,4 @@
-package com.example.ulive;
+package com.example.uliv;
 
 import org.junit.Test;
 

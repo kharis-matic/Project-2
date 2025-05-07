@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.RealEstateApp" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+    <style name="Theme.RealEstateApp" parent="Base.Theme.RealEstateApp" />
+
+    <style name="image_style_circle"> <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="image_style_corners_rounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item> </style>
+
+</resources>
