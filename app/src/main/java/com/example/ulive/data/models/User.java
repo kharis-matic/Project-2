@@ -1,8 +1,16 @@
-package com.example.ulive.models;
+package com.example.ulive.data.models;
 
-import com.google.firebase.firestore.Exclude;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import java.util.Date;
+
+@Entity(tableName = "users")
 public class User {
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "user_id")
     private String id;
     private String type; // "Renter" or "Owner"
     private String firstName;
@@ -11,6 +19,7 @@ public class User {
     private String gender; // "Female" or "Male"
     private boolean activeStatus;
     private String phoneNumber;
+
 
     public String getId() {
         return id;
@@ -85,7 +94,7 @@ public class User {
         this.activeStatus = true;
     }
 
-    @Exclude
+
     public String getFullName() {
         return firstName + " " + lastName;
     }

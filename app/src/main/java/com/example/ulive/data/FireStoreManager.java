@@ -1,4 +1,4 @@
-package com.example.ulive.database;
+package com.example.ulive.data;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
