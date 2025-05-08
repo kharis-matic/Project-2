@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="10dp"
+    app:strokeWidth=".5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/profileRl"
+            android:layout_width="110dp"
+            android:layout_height="130dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/propertyIv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@color/colorPrimary"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/image_style_corners_rounded"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+        </RelativeLayout>
+
+        <!-- Property Title -->
+        <TextView
+            android:id="@+id/titleTv"
+            style="@style/TextAppearance.Material3.TitleMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profileRl"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@android:color/black"
+            android:text="Sunny Stay Dormitel"  />
+
+        <!-- Property location -->
+        <TextView
+            android:id="@+id/locationTv"
+            style="@style/TextAppearance.Material3.BodySmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTv"
+            android:layout_toEndOf="@id/profileRl"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Sayre Highway, Lumbo, Valencia City"/>
+
+        <TextView
+            android:id="@+id/lotTypeTv"
+            style="@style/TextAppearance.Material3.BodySmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/locationTv"
+            android:layout_toEndOf="@id/profileRl"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Boarding house"/>
+
+        <!-- Material Card --><!--details, "pet-friendly", "Dining area"-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/detailsCv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lotTypeTv"
+            android:layout_toEndOf="@id/profileRl"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="5dp"
+            app:strokeWidth="1dp">
+
+            <!--text Property type: Boarding house, apartment, dorm-->
+            <TextView
+                android:id="@+id/detailsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="5dp"
+                tools:text="Pet-friendly" />
+
+        </com.google.android.material.card.MaterialCardView>
+        <!--text details-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/details2Cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lotTypeTv"
+            android:layout_toEndOf="@id/detailsCv"
+            android:layout_marginStart="2dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="5dp"
+            app:strokeWidth="1dp">
+
+            <!--text details-->
+            <TextView
+                android:id="@+id/details2Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="5dp"
+                tools:text="Furnished" />
+
+        </com.google.android.material.card.MaterialCardView>
+        <!--text details-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/details3Cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lotTypeTv"
+            android:layout_toEndOf="@id/details2Cv"
+            android:layout_marginStart="2dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="5dp"
+            app:strokeWidth="1dp">
+
+            <!--text details-->
+            <TextView
+                android:id="@+id/details3Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="5dp"
+                tools:text="Dining area" />
+
+        </com.google.android.material.card.MaterialCardView>
+        <!--Date-->
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Material3.LabelMedium"
+            tools:text="@tools:sample/date/ddmmyy"
+            android:layout_toEndOf="@id/profileRl"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/time_grey"
+            android:drawablePadding="4dp"
+            android:layout_below="@id/details3Cv"/>
+
+        <!--price-->
+        <TextView
+            android:id="@+id/priceSymbolTv"
+            style="@style/TextAppearance.Material3.LabelLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/details3Cv"
+            android:layout_toStartOf="@id/priceTv"
+            android:layout_marginTop="8dp"
+            android:text="@string/price_symbol"/>
+
+        <TextView
+            android:id="@+id/priceTv"
+            style="@style/TextAppearance.Material3.LabelLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/details3Cv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:text="1500"/>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
