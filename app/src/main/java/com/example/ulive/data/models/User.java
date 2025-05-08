@@ -11,7 +11,7 @@ import java.util.Date;
 public class User {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "user_id")
-    private String id;
+    private int id;
     private String type; // "Renter" or "Owner"
     private String firstName;
     private String lastName;
@@ -21,8 +21,12 @@ public class User {
     private String phoneNumber;
 
 
-    public String getId() {
+    public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getLastName() {

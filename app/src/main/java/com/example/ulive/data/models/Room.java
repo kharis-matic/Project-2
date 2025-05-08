@@ -1,6 +1,13 @@
 package com.example.ulive.data.models;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity (tableName = "rooms")
 public class Room {
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "room_id")
     private String id;
     private String propertyId;
     private boolean availabilityStatus;
