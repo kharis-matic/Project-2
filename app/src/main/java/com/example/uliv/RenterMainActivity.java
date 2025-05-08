@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.uliv.databinding.ActivityMainBinding;
+import com.example.uliv.databinding.ActivityRenterMainBinding;
 import com.example.uliv.fragments.NotificationListFragment;
 import com.example.uliv.fragments.ProfileFragment;
 import com.example.uliv.fragments.renter.BookingsFragment;
@@ -17,12 +18,12 @@ import com.google.android.material.navigation.NavigationBarView;
 public class RenterMainActivity extends AppCompatActivity {
 
     //View Binding
-    private ActivityMainBinding binding;
+    private ActivityRenterMainBinding binding;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        activity_main.xml = ActivityMainBinding;
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityRenterMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         binding.bottomNavigationView.setOnItemReselectedListener(new NavigationBarView.OnItemReselectedListener() {

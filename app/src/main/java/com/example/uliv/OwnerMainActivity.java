@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.uliv.databinding.ActivityMainBinding;
+import com.example.uliv.databinding.ActivityOwnerMainBinding;
 import com.example.uliv.fragments.owner.EnquiriesListFragment;
 import com.example.uliv.fragments.owner.OwnerHomeFragment;
 import com.example.uliv.fragments.NotificationListFragment;
@@ -17,12 +18,12 @@ import com.google.android.material.navigation.NavigationBarView;
 public class OwnerMainActivity extends AppCompatActivity {
 
     //View Binding
-    private ActivityMainBinding binding;
+    private ActivityOwnerMainBinding binding;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        activity_main.xml = ActivityMainBinding;
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityOwnerMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         binding.bottomNavigationView.setOnItemReselectedListener(new NavigationBarView.OnItemReselectedListener() {
