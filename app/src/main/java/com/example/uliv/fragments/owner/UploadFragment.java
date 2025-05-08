@@ -1,4 +1,4 @@
-package com.example.uliv.fragments;
+package com.example.uliv.fragments.property_owner;
 
 import android.os.Bundle;
 
@@ -10,16 +10,16 @@ import android.view.ViewGroup;
 
 import com.example.uliv.R;
 
-public class EnquiriesListFragment extends Fragment {
+public class UploadFragment extends Fragment {
 
-    public EnquiriesListFragment() {
-
+    public UploadFragment() {
+        // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_properties_list, container, false);
+        return inflater.inflate(R.layout.fragment_upload, container, false);
     }
 }

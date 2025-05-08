@@ -13,10 +13,10 @@ import androidx.fragment.app.FragmentTransaction;
 //import androidx.core.view.WindowInsetsCompat;
 
 import com.example.uliv.databinding.ActivityMainBinding;
-import com.example.uliv.fragments.EnquiriesListFragment;
-import com.example.uliv.fragments.NotificationListFragment;
-import com.example.uliv.fragments.HomeFragment;
-import com.example.uliv.fragments.ProfileFragment;
+import com.example.uliv.fragments.property_owner.EnquiriesListFragment;
+import com.example.uliv.fragments.property_owner.NotificationListFragment;
+import com.example.uliv.fragments.property_owner.HomeFragment;
+import com.example.uliv.fragments.property_owner.ProfileFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
