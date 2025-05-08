@@ -1,4 +1,4 @@
-package com.example.uliv.fragments.owner;
+package com.example.uliv.fragments.renter;
 
 import android.os.Bundle;
 
@@ -10,16 +10,17 @@ import android.view.ViewGroup;
 
 import com.example.uliv.R;
 
-public class HomeFragment extends Fragment {
+public class BookingsFragment extends Fragment {
 
-    public HomeFragment(){
-
+    public BookingsFragment() {
+        // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        return inflater.inflate(R.layout.fragment_renter_bookings, container, false);
     }
 }

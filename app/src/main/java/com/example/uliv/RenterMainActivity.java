@@ -3,24 +3,18 @@ package com.example.uliv;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.uliv.databinding.ActivityMainBinding;
-import com.example.uliv.fragments.owner.EnquiriesListFragment;
-import com.example.uliv.fragments.owner.HomeFragment;
 import com.example.uliv.fragments.owner.NotificationListFragment;
 import com.example.uliv.fragments.owner.ProfileFragment;
-import com.example.uliv.fragments.renter.RenterBookingsFragment;
+import com.example.uliv.fragments.renter.BookingsFragment;
 import com.example.uliv.fragments.renter.RenterHomeFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class RenterActivity extends AppCompatActivity {
+public class RenterMainActivity extends AppCompatActivity {
 
     //View Binding
     private ActivityMainBinding binding;
@@ -73,9 +67,9 @@ public class RenterActivity extends AppCompatActivity {
         binding.toolbarTitleTv.setText("Bookings");
 
 
-        RenterBookingsFragment bookingsFragment = new RenterBookingsFragment();
+        BookingsFragment bookingsFragment = new BookingsFragment();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(binding.fragmentsFl.getId(), bookingsFragment, "RenterBookingsFragment");
+        fragmentTransaction.replace(binding.fragmentsFl.getId(), bookingsFragment, "BookingsFragment");
         fragmentTransaction.commit();
     }
 
