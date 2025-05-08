@@ -1,4 +1,4 @@
-package com.example.uliv.fragments.property_owner;
+package com.example.uliv.fragments.owner;
 
 import android.os.Bundle;
 
