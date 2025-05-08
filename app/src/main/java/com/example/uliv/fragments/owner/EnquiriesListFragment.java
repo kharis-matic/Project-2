@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.example.uliv.R;
 
+// SHOWS: who enquired the property
 public class EnquiriesListFragment extends Fragment {
 
     public EnquiriesListFragment() {

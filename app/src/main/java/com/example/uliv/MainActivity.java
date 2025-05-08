@@ -1,11 +1,8 @@
 package com.example.uliv;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 //import androidx.activity.EdgeToEdge;
 //import androidx.core.graphics.Insets;
@@ -13,11 +10,6 @@ import androidx.fragment.app.FragmentTransaction;
 //import androidx.core.view.WindowInsetsCompat;
 
 import com.example.uliv.databinding.ActivityMainBinding;
-import com.example.uliv.fragments.owner.EnquiriesListFragment;
-import com.example.uliv.fragments.owner.NotificationListFragment;
-import com.example.uliv.fragments.owner.OwnerHomeFragment;
-import com.example.uliv.fragments.owner.ProfileFragment;
-import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
 

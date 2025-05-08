@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.example.uliv.R;
 
+// SHOWS: The upload form of the property
 public class UploadFragment extends Fragment {
 
     public UploadFragment() {

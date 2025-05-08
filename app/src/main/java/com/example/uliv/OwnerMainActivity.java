@@ -10,8 +10,8 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.uliv.databinding.ActivityMainBinding;
 import com.example.uliv.fragments.owner.EnquiriesListFragment;
 import com.example.uliv.fragments.owner.OwnerHomeFragment;
-import com.example.uliv.fragments.owner.NotificationListFragment;
-import com.example.uliv.fragments.owner.ProfileFragment;
+import com.example.uliv.fragments.NotificationListFragment;
+import com.example.uliv.fragments.ProfileFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class OwnerMainActivity extends AppCompatActivity {
@@ -26,11 +26,15 @@ public class OwnerMainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.bottomNavigationView.setOnItemReselectedListener(new NavigationBarView.OnItemReselectedListener() {
+
+            // Bottom navigation bar for Owner
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem item) {
 
                 int itemId = item.getItemId();
 
+                // MISSING: should have if(user.owner) here so that whenever it redirects here the
+                // page should redirect to home
                 if (itemId == R.id.item_home) {
                     showOwnerHomeFragment();
 
@@ -53,6 +57,7 @@ public class OwnerMainActivity extends AppCompatActivity {
         });
     }
 
+    // Show functions that redirects to the fragments class
     private void showOwnerHomeFragment() {
 
         binding.toolbarTitleTv.setText("Home");

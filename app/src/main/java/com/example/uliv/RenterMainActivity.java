@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.uliv.databinding.ActivityMainBinding;
-import com.example.uliv.fragments.owner.NotificationListFragment;
-import com.example.uliv.fragments.owner.ProfileFragment;
+import com.example.uliv.fragments.NotificationListFragment;
+import com.example.uliv.fragments.ProfileFragment;
 import com.example.uliv.fragments.renter.BookingsFragment;
 import com.example.uliv.fragments.renter.RenterHomeFragment;
 import com.google.android.material.navigation.NavigationBarView;
@@ -26,11 +26,15 @@ public class RenterMainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.bottomNavigationView.setOnItemReselectedListener(new NavigationBarView.OnItemReselectedListener() {
+
+            // Bottom navigation bar for Renter
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem item) {
 
                 int itemId = item.getItemId();
 
+                // MISSING: should have if(user.renter) here so that whenever it redirects here the
+                // page should redirect to home
                 if (itemId == R.id.item_home) {
                     showRenterHomeFragment();
 
@@ -51,6 +55,7 @@ public class RenterMainActivity extends AppCompatActivity {
         });
     }
 
+    // Show functions that redirects to the fragments class
     private void showRenterHomeFragment() {
 
         binding.toolbarTitleTv.setText("Home");

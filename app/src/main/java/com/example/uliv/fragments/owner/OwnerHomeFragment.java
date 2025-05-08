@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 import com.example.uliv.R;
 
+// Here Resides the Home contents of the Property Owner
+// SHOWS: List of properties that the owner owns
 public class OwnerHomeFragment extends Fragment {
 
     public OwnerHomeFragment(){

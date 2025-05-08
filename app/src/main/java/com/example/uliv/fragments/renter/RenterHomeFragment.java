@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 import com.example.uliv.R;
 
+// Here Resides the Home contents of Renter
+// SHOWS: Property list and Search bar
 public class RenterHomeFragment extends Fragment {
    public RenterHomeFragment() {
         // Required empty public constructor

@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.example.uliv.R;
 
+// SHOWS: What renters enquired; Also shows booking status (Pending, Accepter, Canceled)
 public class BookingsFragment extends Fragment {
 
     public BookingsFragment() {
