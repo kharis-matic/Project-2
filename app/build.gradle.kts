@@ -44,8 +44,15 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.firebase.analytics)
 
-    implementation("com.google.firebase:firebase-auth:22.3.0")
-    implementation(libs.firebase.database)
+
+    // Import the BoM for the Firebase platform
+    implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
+
+    // Declare the dependency for the Cloud Firestore library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-storage")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
