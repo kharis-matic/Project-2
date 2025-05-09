@@ -1,103 +1,53 @@
 package com.example.uliv;
 
 import android.os.Bundle;
-import android.view.MenuItem;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
-
-import com.example.uliv.databinding.ActivityMainBinding;
 import com.example.uliv.databinding.ActivityRenterMainBinding;
-import com.example.uliv.fragments.NotificationListFragment;
-import com.example.uliv.fragments.ProfileFragment;
-import com.example.uliv.fragments.renter.BookingsFragment;
 import com.example.uliv.fragments.renter.RenterHomeFragment;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class RenterMainActivity extends AppCompatActivity {
 
-    //View Binding
     private ActivityRenterMainBinding binding;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        activity_main.xml = ActivityMainBinding;
         binding = ActivityRenterMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.bottomNavigationView.setOnItemReselectedListener(new NavigationBarView.OnItemReselectedListener() {
+        if (savedInstanceState == null) {
+            loadFragment(new RenterHomeFragment());
+            binding.bottomNavigationView.setSelectedItemId(R.id.item_home);
+        }
 
-            // Bottom navigation bar for Renter
+        binding.bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem item) {
-
+            public boolean onNavigationItemSelected(@NonNull android.view.MenuItem item) {
                 int itemId = item.getItemId();
-
-                // MISSING: should have if(user.renter) here so that whenever it redirects here the
-                // page should redirect to home
                 if (itemId == R.id.item_home) {
-                    showRenterHomeFragment();
-
+                    loadFragment(new RenterHomeFragment());
+                    return true;
                 } else if (itemId == R.id.item_bookings) {
-                    showBookingsFragment();
-
+                    loadFragment(new RenterHomeFragment()); // Temporary
+                    return true;
                 } else if (itemId == R.id.item_notification) {
-                    showNotificationListFragment();
-
+                    loadFragment(new RenterHomeFragment()); // Temporary
+                    return true;
                 } else if (itemId == R.id.item_profile) {
-                    showProfileFragment();
-
+                    loadFragment(new RenterHomeFragment()); // Temporary
+                    return true;
                 }
-
-                return;
-
+                return false;
             }
         });
     }
 
-    // Show functions that redirects to the fragments class
-    private void showRenterHomeFragment() {
-
-        binding.toolbarTitleTv.setText("Home");
-
-
-        RenterHomeFragment homeFragment = new RenterHomeFragment();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(binding.fragmentsFl.getId(), homeFragment, "HomeFragment");
-        fragmentTransaction.commit();
-    }
-
-    private void showBookingsFragment() {
-
-        binding.toolbarTitleTv.setText("Bookings");
-
-
-        BookingsFragment bookingsFragment = new BookingsFragment();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(binding.fragmentsFl.getId(), bookingsFragment, "BookingsFragment");
-        fragmentTransaction.commit();
-    }
-
-    private void showNotificationListFragment() {
-
-        binding.toolbarTitleTv.setText("Notifications");
-
-
-        NotificationListFragment notificationListFragment = new NotificationListFragment();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(binding.fragmentsFl.getId(), notificationListFragment, "NotificationListFragment");
-        fragmentTransaction.commit();
-    }
-
-    private void showProfileFragment() {
-
-        binding.toolbarTitleTv.setText("Profile");
-
-
-        ProfileFragment profileFragment = new ProfileFragment();
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(binding.fragmentsFl.getId(), profileFragment, "profileFragment");
-        fragmentTransaction.commit();
+    private void loadFragment(RenterHomeFragment fragment) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(binding.fragmentsFl.getId(), fragment, "RenterHomeFragment");
+        transaction.commit();
     }
 }

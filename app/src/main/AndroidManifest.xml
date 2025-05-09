@@ -25,9 +25,9 @@
         </activity>
 
         <!-- Other activities -->
-        <activity android:name=".RenterMainActivity" android:exported="false" />
-        <activity android:name=".OwnerMainActivity" android:exported="false" />
-        <activity android:name=".activities.LoginEmailActivity" />
+        <activity android:name=".RenterMainActivity" android:exported="true" />
+        <activity android:name=".OwnerMainActivity" android:exported="true" />
+        <activity android:name=".activities.LoginEmailActivity" android:exported="true" />
 
     </application>
 </manifest>
