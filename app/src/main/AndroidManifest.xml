@@ -3,6 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.uliv">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -24,10 +32,10 @@
             </intent-filter>
         </activity>
 
+
         <!-- Other activities -->
         <activity android:name=".RenterMainActivity" android:exported="false" />
         <activity android:name=".OwnerMainActivity" android:exported="false" />
-        <activity android:name=".activities.LoginEmailActivity" />
 
     </application>
 </manifest>
