@@ -27,6 +27,8 @@
                 android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/image_style_corners_rounded"
                 tools:src="@tools:sample/backgrounds/scenic" />
+            
+
 
         </RelativeLayout>
 
@@ -34,7 +36,7 @@
         <TextView
             android:id="@+id/titleTv"
             style="@style/TextAppearance.Material3.TitleMedium"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/profileRl"
             android:layout_marginStart="10dp"
@@ -48,7 +50,7 @@
         <TextView
             android:id="@+id/locationTv"
             style="@style/TextAppearance.Material3.BodySmall"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/titleTv"
             android:layout_toEndOf="@id/profileRl"
@@ -61,7 +63,7 @@
         <TextView
             android:id="@+id/categoryTv"
             style="@style/TextAppearance.Material3.BodySmall"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/locationTv"
             android:layout_toEndOf="@id/profileRl"
@@ -91,9 +93,9 @@
             style="@style/TextAppearance.Material3.LabelLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/categoryTv"
-            android:layout_toStartOf="@id/priceTv"
-            android:layout_marginTop="8dp"
+            android:layout_alignTop="@id/titleTv"
+            android:layout_toEndOf="@id/titleTv"
+            android:layout_marginStart="40dp"
             android:text="@string/price_symbol"/>
 
         <TextView
@@ -101,14 +103,22 @@
             style="@style/TextAppearance.Material3.LabelLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/dateTv"
+            android:layout_toEndOf="@id/priceSymbolTv"
+            android:layout_alignTop="@id/titleTv"
+            android:text="1500" />
+
+        <Button
+            android:id="@+id/enquireBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@id/categoryTv"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="8dp"
-            android:text="1500"/>
-
-
-
-
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Enquire"
+            android:textSize="14sp"
+            android:padding="4dp"/>
 
 
 
