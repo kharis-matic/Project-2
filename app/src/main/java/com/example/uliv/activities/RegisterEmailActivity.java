@@ -76,7 +76,7 @@ public class RegisterEmailActivity extends AppCompatActivity {
                 } else if (!txt_password.equals(txt_confirmPassword)) {
                     Toast.makeText(RegisterEmailActivity.this, "Password must be the same!", Toast.LENGTH_SHORT).show();
                 }else {
-                    registerUSer(txt_firstName, txt_lastName, txt_gender, txt_role, txt_email, txt_phoneNumber, txt_password, txt_confirmPassword);
+                    registerUser(txt_firstName, txt_lastName, txt_gender, txt_role, txt_email, txt_phoneNumber, txt_password, txt_confirmPassword);
                 }
 
                 {
@@ -87,7 +87,8 @@ public class RegisterEmailActivity extends AppCompatActivity {
 
     }
 
-    private void registerUSer(String txtFirstName, String txtLastName, String txtGender, String txtRole, String txtEmail, String txtPhoneNumber, String txtPassword, String txtConfirmPassword) {
+    private void registerUser(String txtFirstName, String txt_lastName, String txt_gender, String txt_role, String txt_email, String txt_phoneNumber, String txt_password, String txt_confirmPassword) {
+
 
     }
 }
