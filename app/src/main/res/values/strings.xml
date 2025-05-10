@@ -5,4 +5,17 @@
     <string name="have_an_account_login">Have an Account? <b>Login</b></string>
     <string name="upload">Upload</string>
     <string name="price_symbol">₱</string>
+
+    <string name="please_wait">Please wait</string>
+    <string name="validating_data">Validating data…</string>
+    <string name="preparing_data">Preparing data for submission…</string>
+
+    <string name="room_number_prefix">Room #%1$d</string> <string name="room_number_prefix_no_format">Room #</string>
+    <string name="room_view_removed">Room #%1$d view removed.</string>
+    <string name="error_in_room">Error in %1$s</string>
+
+    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_number">Invalid number</string>
+    <string name="error_value_must_be_positive">Must be > 0</string>
+    <string name="error_cannot_be_negative">Cannot be negative</string>
 </resources>
