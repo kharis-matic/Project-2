@@ -57,12 +57,12 @@
         android:layout_below="@id/toolbarRl"
         android:padding="10dp">
 
-        <!-- First Name and Last Name input fields (side by side) -->
+        <!-- First Name and Last Name (Side by Side) -->
         <LinearLayout
             android:id="@+id/nameLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="0dp"
             android:orientation="horizontal">
 
             <!-- First Name field -->
@@ -112,26 +112,19 @@
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
-        <!-- Gender dropdown selector -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/genderTil"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        <!-- Gender and Role (Side by Side) -->
+        <LinearLayout
+            android:id="@+id/genderRoleLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/nameLayout"
             android:layout_marginTop="10dp"
-            android:hint=" Select Gender"
-            android:textColorHint="@android:color/black"
-            app:boxCornerRadiusBottomEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusTopStart="8dp"
-            app:boxStrokeColor="@android:color/black"
-            app:endIconMode="dropdown_menu">
+            android:orientation="horizontal">
 
-            <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/genderEt"
-                android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/genderTil"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:textColor="@android:color/black" />
@@ -139,23 +132,23 @@
 
         <!-- Role dropdown selector -->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/roleTil"
+            android:id="@+id/birthdayTil"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/genderTil"
-            android:layout_marginTop="4dp"
-            android:hint=" Select Role"
+            android:layout_below="@id/genderRoleLayout"
+            android:layout_marginTop="10dp"
+            android:hint="Birthday (MM/DD/YYYY)"
             android:textColorHint="@android:color/black"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
             app:boxCornerRadiusTopEnd="8dp"
             app:boxCornerRadiusTopStart="8dp"
-            app:boxStrokeColor="@android:color/black"
-            app:endIconMode="dropdown_menu">
+            app:boxStrokeColor="@android:color/black">
 
-            <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/roleEt"
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/birthdayEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -168,7 +161,7 @@
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/roleTil"
+            android:layout_below="@id/birthdayTil"
             android:layout_marginTop="10dp"
             android:hint="Email"
             android:textColorHint="@android:color/black"
@@ -267,7 +260,7 @@
             style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/confirmPasswordTil"
+            android:layout_below="@id/confirmPasswordTil"
             android:text="@string/have_an_account_login"
             android:layout_marginTop="5dp"/>
 
