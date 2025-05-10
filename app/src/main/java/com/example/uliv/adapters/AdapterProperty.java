@@ -95,12 +95,12 @@ public class AdapterProperty extends RecyclerView.Adapter<AdapterProperty.Holder
         // Extract data from the Property model.
         String title = modelProperty.getTitle();
         String address = modelProperty.getAddress();
-        String category = modelProperty.getCategory();
-        String date = modelProperty.getDate(); // Assumed to be a pre-formatted date string.
+        String category = modelProperty.getType();
+//        String date = modelProperty.getDate(); // Assumed to be a pre-formatted date string.
         // Format the price as a whole number string.
-        String price = String.format("%.0f", modelProperty.getPrice());
+//        String price = String.format("%.0f", modelProperty.getPrice());
         // Get the image URL from the Property model.
-        String imageUrl = modelProperty.getImageUrl(); // Assumes Property model has getImageUrl()
+        String imageUrl = modelProperty.getPrimaryImageUrl(); // Assumes Property model has getImageUrl()
 
         // Log the binding process for the current item.
         Log.d(TAG, "onBindViewHolder: Binding position " + position + ": title=" + title);
