@@ -1,15 +1,15 @@
 package com.example.uliv.models;
 
-public class ModelProperty {
+public class Property {
     private String id, title, address, category, date, imageUrl;
     private double price;
 
     // Default constructor (required for Firebase)
-    public ModelProperty() {}
+    public Property() {}
 
     // Parameterized constructor
-    public ModelProperty(String id, String title, String address, String category, String date,
-                         double price, String imageUrl) {
+    public Property(String id, String title, String address, String category, String date,
+                    double price, String imageUrl) {
         this.id = id;
         this.title = title;
         this.address = address;

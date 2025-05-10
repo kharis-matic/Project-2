@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.uliv.R;
 import com.example.uliv.databinding.RowPropertyBinding;
-import com.example.uliv.models.ModelProperty;
+import com.example.uliv.models.Property;
 import com.google.android.material.imageview.ShapeableImageView;
 import java.util.ArrayList;
 
@@ -20,9 +20,9 @@ public class AdapterProperty extends RecyclerView.Adapter<AdapterProperty.Holder
     private RowPropertyBinding binding;
     private static final String TAG = "PROPERTY_TAG";
     private Context context;
-    private ArrayList<ModelProperty> propertyArrayList;
+    private ArrayList<Property> propertyArrayList;
 
-    public AdapterProperty(Context context, ArrayList<ModelProperty> propertyArrayList) {
+    public AdapterProperty(Context context, ArrayList<Property> propertyArrayList) {
         this.context = context;
         this.propertyArrayList = propertyArrayList;
         Log.d(TAG, "AdapterProperty: Initialized with " + propertyArrayList.size() + " items");
@@ -38,7 +38,7 @@ public class AdapterProperty extends RecyclerView.Adapter<AdapterProperty.Holder
 
     @Override
     public void onBindViewHolder(@NonNull HolderProperty holder, int position) {
-        ModelProperty modelProperty = propertyArrayList.get(position);
+        Property modelProperty = propertyArrayList.get(position);
         String title = modelProperty.getTitle();
         String address = modelProperty.getAddress();
         String category = modelProperty.getCategory();

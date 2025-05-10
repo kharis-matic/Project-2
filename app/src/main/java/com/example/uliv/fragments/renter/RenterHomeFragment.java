@@ -10,10 +10,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.uliv.R;
+
 import com.example.uliv.adapters.AdapterProperty;
 import com.example.uliv.databinding.FragmentRenterHomeBinding;
-import com.example.uliv.models.ModelProperty;
+import com.example.uliv.models.Property;
 import java.util.ArrayList;
 
 public class RenterHomeFragment extends Fragment {
@@ -21,7 +21,7 @@ public class RenterHomeFragment extends Fragment {
     private FragmentRenterHomeBinding binding;
     private static final String TAG = "RENTER_HOME_TAG";
     private Context mContext;
-    private ArrayList<ModelProperty> propertyArrayList;
+    private ArrayList<Property> propertyArrayList;
     private AdapterProperty adapterProperty;
 
     @Override
@@ -47,19 +47,19 @@ public class RenterHomeFragment extends Fragment {
         Log.d(TAG, "onViewCreated: Property list initialized");
 
         // Dummy data
-        propertyArrayList.add(new ModelProperty(
+        propertyArrayList.add(new Property(
                 "1", "Sunny Stay Dormitel", "Sayre Highway, Lumbo, Valencia City",
                 "Boarding house", "01/01/2025", 1500.0, "https://via.placeholder.com/150"
         ));
-        propertyArrayList.add(new ModelProperty(
+        propertyArrayList.add(new Property(
                 "2", "Cozy Pad", "Main St, Cubao, Quezon City",
                 "Apartment", "02/01/2025", 2000.0, "https://via.placeholder.com/150"
         ));
-        propertyArrayList.add(new ModelProperty(
+        propertyArrayList.add(new Property(
                 "3", "Bautista Apartment", "Musuan, Maramag",
                 "Apartment", "02/01/2025", 3000.0, "https://via.placeholder.com/150"
         ));
-        propertyArrayList.add(new ModelProperty(
+        propertyArrayList.add(new Property(
                 "4", "New Rose Dormitory", "CMU, Musuan, Maramag",
                 "Dorm", "02/01/2025", 1500.0, "https://via.placeholder.com/150"
         ));
