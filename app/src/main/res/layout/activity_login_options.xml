@@ -5,15 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="activities.LoginOptionsActivity">
+    tools:context="activities.LoginEmailActivity">
 
+    <!-- Background View: Fills entire screen with an image and a dark overlay for contrast -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/loginbg"
-        android:foreground="@color/black_transparent">
-    </View>
+        android:foreground="@color/black_transparent" />
 
+    <!-- Skip Button: Top-right corner, allows user to skip login -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/skipBtn"
         android:layout_width="wrap_content"
@@ -25,9 +26,9 @@
         app:backgroundTint="@android:color/transparent"
         android:layout_margin="10dp"
         app:strokeColor="@color/white"
-        app:strokeWidth="1dp">
-    </com.google.android.material.button.MaterialButton>
+        app:strokeWidth="1dp" />
 
+    <!-- Bottom Container for login options -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,26 +36,28 @@
         android:orientation="vertical"
         android:padding="10dp">
 
+        <!-- Login with Phone Number Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/loginPhoneBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="@dimen/m_button_height"
             app:icon="@drawable/phone_black"
-            android:text="Continue with phone number"/>
+            android:text="Continue with phone number" />
 
-
-
+        <!-- Divider with "or continue with" text in the center -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!-- Left Divider Line -->
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@id/continueWithLableTv"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true" />
 
+            <!-- Center TextView Label -->
             <TextView
                 android:id="@+id/continueWithLableTv"
                 android:layout_width="wrap_content"
@@ -63,21 +66,24 @@
                 android:textColor="@color/white"
                 android:layout_centerInParent="true"
                 android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"/>
+                android:layout_marginEnd="20dp" />
 
+            <!-- Right Divider Line -->
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/continueWithLableTv"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true" />
         </RelativeLayout>
 
+        <!-- Horizontal Layout for More Options (Email and Google) -->
         <LinearLayout
             android:id="@+id/moreOptionsLl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <!-- Email Login Button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/loginEmailBtn"
                 android:layout_width="match_parent"
@@ -86,8 +92,9 @@
                 android:minHeight="@dimen/m_button_height"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="1"
-                app:icon="@drawable/email_white"/>
+                app:icon="@drawable/email_white" />
 
+            <!-- Google Login Button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/loginGoogleBtn"
                 android:layout_width="match_parent"
@@ -96,7 +103,7 @@
                 android:minHeight="@dimen/m_button_height"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="1"
-                app:icon="@drawable/google_white"/>
+                app:icon="@drawable/google_white" />
 
         </LinearLayout>
     </LinearLayout>
