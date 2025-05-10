@@ -7,14 +7,14 @@
     android:layout_height="match_parent"
     tools:context="activities.LoginEmailActivity">
 
-    <!--Header BG-->
+    <!-- Header Section -->
     <RelativeLayout
         android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:background="@drawable/toolbar_br01">
 
-        <!--Back Button-->
+        <!-- Back Button - Transparent background, used to return to previous screen -->
         <ImageButton
             android:id="@+id/toolbarBackBtn"
             android:layout_width="wrap_content"
@@ -24,7 +24,7 @@
             android:src="@drawable/back_white"
             app:tint="?attr/colorOnPrimary" />
 
-        <!--Profile Picture-->
+        <!-- Profile Image in circular style, centered horizontally -->
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/profileIv"
             android:layout_width="70dp"
@@ -35,25 +35,26 @@
             android:src="@drawable/person_black"
             app:shapeAppearanceOverlay="@style/image_style_circle" />
 
-        <!--Acc Name / Login to Acc Text-->
+        <!-- Header Title Text - Appears below profile picture -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/profileIv"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="8dp" android:text="Login to your account"
+            android:layout_marginTop="8dp"
+            android:text="Login to your account"
             android:textColor="?attr/colorOnPrimary"
             android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
     </RelativeLayout>
 
-    <!--Body-->
+    <!-- Body Section: Contains input fields and login button -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbarRl"
         android:padding="10dp">
 
-        <!--Email Input-->
+        <!-- Email Input Field inside TextInputLayout -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailTil"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -67,38 +68,38 @@
             app:boxCornerRadiusTopStart="8dp"
             app:startIconDrawable="@drawable/email_black">
 
+            <!-- Email EditText Input -->
             <EditText
                 android:id="@+id/emailEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"/>
-
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--Password Input-->
+        <!-- Password Input Field with toggle visibility -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordTil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:layout_below="@id/emailTil"
             android:hint="Password"
             app:boxCornerRadiusTopStart="8dp"
             app:boxCornerRadiusTopEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
             app:boxCornerRadiusBottomEnd="8dp"
             app:passwordToggleEnabled="true"
-            app:startIconDrawable="@drawable/lock_white"
-            android:layout_below="@id/emailTil">
+            app:startIconDrawable="@drawable/lock_white">
 
+            <!-- Password EditText Input -->
             <EditText
                 android:id="@+id/passwordEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"/>
-
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--Login Button-->
+        <!-- Login Button pinned to bottom of screen -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/loginBtnTv"
             android:layout_width="match_parent"

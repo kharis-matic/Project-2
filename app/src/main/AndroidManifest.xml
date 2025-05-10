@@ -1,33 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Application Manifest File
+ * Defines essential information about the app for the Android system, including permissions, features, and activities.
+-->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.uliv">
 
+    <!--
+     * Declares the use of the camera hardware feature, but it's not required.
+     * This allows the app to run on devices without a camera.
+     -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <!--
+     * Permission to access the internet.
+     * Required for network operations like HTTP requests.
+     -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+     * Permission to access the device camera.
+     * Required if the app uses camera functionality.
+     -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--
+     * Permission to write to external storage, limited to devices up to SDK 32.
+     * Often used for saving files or media.
+     -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+
+    <!--
+     * Application block defines global properties and included components of the app.
+     -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_uliv_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_uliv_launcher"
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.uliv"
         tools:targetApi="31">
 
-        <!-- Main launcher activity -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+    <!--
+     * Main launcher activity.
+     * This activity is the entry point of the app.
+     -->
+    <activity
+        android:name=".MainActivity"
+        android:exported="true"> <!-- Required for activities with intent-filters on API 31+. -->
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" /> <!-- Marks it as the main entry activity. -->
+            <category android:name="android.intent.category.LAUNCHER" /> <!-- Places app in the launcher. -->
+        </intent-filter>
+    </activity>
 
-        <!-- Other activities -->
-        <activity android:name=".RenterMainActivity" android:exported="true" />
-        <activity android:name=".OwnerMainActivity" android:exported="true" />
-        <activity android:name=".activities.LoginEmailActivity" android:exported="true" />
+    <!-- Other declared activities within the app -->
+
+    <!-- Main screen for renters after login -->
+    <activity android:name=".RenterMainActivity" android:exported="true" />
+
+    <!-- Main screen for property owners after login -->
+    <activity android:name=".OwnerMainActivity" android:exported="true" />
+
+    <!-- Login screen using email -->
+    <activity android:name=".activities.LoginEmailActivity" android:exported="true" />
+
+    <!-- Screen to add a new post/listing -->
+    <activity android:name=".activities.PostAddActivity" android:exported="true" />
 
     </application>
-</manifest>
+
+    </manifest>
