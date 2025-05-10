@@ -16,7 +16,7 @@
         <RelativeLayout
             android:id="@+id/profileRl"
             android:layout_width="110dp"
-            android:layout_height="130dp">
+            android:layout_height="110dp">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/propertyIv"
@@ -27,6 +27,8 @@
                 android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/image_style_corners_rounded"
                 tools:src="@tools:sample/backgrounds/scenic" />
+            
+
 
         </RelativeLayout>
 
@@ -34,7 +36,7 @@
         <TextView
             android:id="@+id/titleTv"
             style="@style/TextAppearance.Material3.TitleMedium"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/profileRl"
             android:layout_marginStart="10dp"
@@ -48,7 +50,7 @@
         <TextView
             android:id="@+id/locationTv"
             style="@style/TextAppearance.Material3.BodySmall"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/titleTv"
             android:layout_toEndOf="@id/profileRl"
@@ -59,9 +61,9 @@
             android:text="Sayre Highway, Lumbo, Valencia City"/>
 
         <TextView
-            android:id="@+id/lotTypeTv"
+            android:id="@+id/categoryTv"
             style="@style/TextAppearance.Material3.BodySmall"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/locationTv"
             android:layout_toEndOf="@id/profileRl"
@@ -71,71 +73,6 @@
             android:ellipsize="end"
             android:text="Boarding house"/>
 
-        <!-- Material Card --><!--details, "pet-friendly", "Dining area"-->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/detailsCv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lotTypeTv"
-            android:layout_toEndOf="@id/profileRl"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginVertical="5dp"
-            app:strokeWidth="1dp">
-
-            <!--text Property type: Boarding house, apartment, dorm-->
-            <TextView
-                android:id="@+id/detailsTv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginVertical="5dp"
-                tools:text="Pet-friendly" />
-
-        </com.google.android.material.card.MaterialCardView>
-        <!--text details-->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/details2Cv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lotTypeTv"
-            android:layout_toEndOf="@id/detailsCv"
-            android:layout_marginStart="2dp"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginVertical="5dp"
-            app:strokeWidth="1dp">
-
-            <!--text details-->
-            <TextView
-                android:id="@+id/details2Tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginVertical="5dp"
-                tools:text="Furnished" />
-
-        </com.google.android.material.card.MaterialCardView>
-        <!--text details-->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/details3Cv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lotTypeTv"
-            android:layout_toEndOf="@id/details2Cv"
-            android:layout_marginStart="2dp"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginVertical="5dp"
-            app:strokeWidth="1dp">
-
-            <!--text details-->
-            <TextView
-                android:id="@+id/details3Tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginVertical="5dp"
-                tools:text="Dining area" />
-
-        </com.google.android.material.card.MaterialCardView>
         <!--Date-->
         <TextView
             android:id="@+id/dateTv"
@@ -148,7 +85,7 @@
             android:layout_marginTop="8dp"
             android:drawableStart="@drawable/time_grey"
             android:drawablePadding="4dp"
-            android:layout_below="@id/details3Cv"/>
+            android:layout_below="@id/categoryTv"/>
 
         <!--price-->
         <TextView
@@ -156,9 +93,9 @@
             style="@style/TextAppearance.Material3.LabelLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/details3Cv"
-            android:layout_toStartOf="@id/priceTv"
-            android:layout_marginTop="8dp"
+            android:layout_alignTop="@id/titleTv"
+            android:layout_toEndOf="@id/titleTv"
+            android:layout_marginStart="40dp"
             android:text="@string/price_symbol"/>
 
         <TextView
@@ -166,14 +103,22 @@
             style="@style/TextAppearance.Material3.LabelLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/details3Cv"
+            android:layout_below="@id/dateTv"
+            android:layout_toEndOf="@id/priceSymbolTv"
+            android:layout_alignTop="@id/titleTv"
+            android:text="1500" />
+
+        <Button
+            android:id="@+id/enquireBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categoryTv"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="8dp"
-            android:text="1500"/>
-
-
-
-
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Enquire"
+            android:textSize="14sp"
+            android:padding="4dp"/>
 
 
 
